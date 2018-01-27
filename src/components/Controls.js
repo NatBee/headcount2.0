@@ -10,12 +10,14 @@ class Controls extends Component {
   }
 
   handleInput = (e) => {
-    const { value } = e.target;
-    this.setState({
-      district: value
-    })
-    this.props.handleSearch(this.state.district)
+    
+    console.log(e.target.value);
+    this.setState({district: e.target.value}, () => {
+        this.props.handleSearch(this.state.district);
+    });
+
   }
+
 
   render() {
     return (

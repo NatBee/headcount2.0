@@ -5,7 +5,7 @@ import '../styles/ComparisonContainer.css';
 const ComparisonContainer = (props) => {
   // console.log(Object.entries(props.comparisonData))
   const comparisonPairs = Object.entries(props.comparisonData)
-  console.log(comparisonPairs[0])
+  //console.log(comparisonPairs[0])
   const dataArray = Object.keys(props.cardCompData)
   const newCard = dataArray.map((location, index) => <Card data={ props.cardCompData[location]} key={index}/>)
 

@@ -35,14 +35,21 @@ class App extends Component {
     if(!compCardArr.includes(location) && compCardArr.length < 2) {
       foundLocation = [...compCardArr, location]
       
-      this.setState({ cardCompData: foundLocation })
-    } else if(!compCardArr.includes(location) && compCardArr.length === 2) {
-      compCardArr.shift();
-      foundLocation = [...compCardArr, location]
+      this.setState({
+        cardCompData: foundLocation
+      }, () => {
+        this.comparison(this.state.cardCompData);
+    });
+    } else if(!this.state.cardCompData.includes(location) && this.state.cardCompData.length === 2) {
+      this.state.cardCompData.shift();
+      let foundLocation = [...this.state.cardCompData, location]
 
-      this.setState({ cardCompData: foundLocation })
+      this.setState({
+        cardCompData: foundLocation
+      }, () => {
+        this.comparison(this.state.cardCompData);
+    });
     }
-      this.comparison(compCardArr)
   }
 
   comparison = (array) => {
