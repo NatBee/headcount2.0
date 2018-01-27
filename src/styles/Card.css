@@ -3,10 +3,11 @@
   width: 250px;
   display: inline-block;
   margin: 0 5px 10px 0;
-  /*height: 120px;*/
+  border-radius: 3em;
   vertical-align: top;
   padding: 5px;
   text-align: center;
+  background-color: #E3D5B2;
 }
 
 .card ul{
@@ -18,12 +19,12 @@
 
 .card li {
   list-style-type: none;  
-  padding: 5px 20px;
+  padding: 2px 20px;
   text-align: left;
 }
 
 .higher{
-  color: green;
+  color: #535C78;
 }
 
 .lower {
