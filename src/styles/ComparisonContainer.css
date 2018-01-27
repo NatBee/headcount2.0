@@ -1,6 +1,6 @@
 .comparison-cards {
   background-color: #0A1B34;
-  height: 415px;
+  height: 450px;
   text-align: center;
   width:100%;
 }
@@ -28,6 +28,10 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.comparison-cards .card {
+  background-color: #5C7BA8
 }
 
 hr {
