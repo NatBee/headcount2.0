@@ -20,45 +20,37 @@ class App extends Component {
   }
 
   componentDidMount() {
-    this.setState({
-      allDistrictData: DistrictData.data
-    })
+    this.setState({ allDistrictData: DistrictData.data })
   }
 
   handleSearch = (string) => {
-    this.setState({
-      allDistrictData: DistrictData.findAllMatches(string)
-    })
+    this.setState({ allDistrictData: DistrictData.findAllMatches(string) })
   }
 
   compareCards = (string) => {
     let location = DistrictData.findByName(string)[0];
+    let compCardArr = this.state.cardCompData;
+    let foundLocation;
 
-    if(!this.state.cardCompData.includes(location) && this.state.cardCompData.length < 2) {
-      let foundLocation = [...this.state.cardCompData, location]
+    if(!compCardArr.includes(location) && compCardArr.length < 2) {
+      foundLocation = [...compCardArr, location]
       
-      this.setState({
-        cardCompData: foundLocation
-      })
-    } else if(!this.state.cardCompData.includes(location) && this.state.cardCompData.length === 2) {
-      this.state.cardCompData.shift();
-      let foundLocation = [...this.state.cardCompData, location]
+      this.setState({ cardCompData: foundLocation })
+    } else if(!compCardArr.includes(location) && compCardArr.length === 2) {
+      compCardArr.shift();
+      foundLocation = [...compCardArr, location]
 
-      this.setState({
-        cardCompData: foundLocation
-      })
+      this.setState({ cardCompData: foundLocation })
     }
-    this.comparison(this.state.cardCompData)
+      this.comparison(compCardArr)
   }
 
   comparison = (array) => {
-
+    console.log('init');
     if(this.state.cardCompData.length === 2) {
       let compData = DistrictData.compareDistrictAverages(array[0].location, array[1].location)
 
-      this.setState({ 
-        comparisonData: compData 
-      })
+      this.setState({ comparisonData: compData })
     }
   }
 
