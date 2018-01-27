@@ -10,7 +10,7 @@ const Card = (props) => {
 
   return (
     <article className='card' onClick={() => props.handleClick(props['data'].location)}>
-      <h2>{props['data'].location}</h2>
+      <h3>{props['data'].location}</h3>
       <ul>{cardDisplay}</ul>
     </article>
   ) 

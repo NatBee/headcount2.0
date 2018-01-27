@@ -15,9 +15,9 @@ const ComparisonContainer = (props) => {
         <article className='comp-card-display'>
           <h2 className='comp-card'>{newCard[0]}</h2>
           <div className='comparison'>
-            <h2>{comparisonPairs[0]}</h2>
-            <h2>{comparisonPairs[1]}</h2>
-            <h2>{comparisonPairs[2]}</h2>
+            <h3>{comparisonPairs[0]}</h3>
+            <h3>{comparisonPairs[1]}</h3>
+            <h3>{comparisonPairs[2]}</h3>
           </div>
           <h2 className='comp-card'>{newCard[1]}</h2>
         </article>

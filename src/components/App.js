@@ -41,33 +41,25 @@ class App extends Component {
         this.comparison(this.state.cardCompData);
     });
     } else if(!this.state.cardCompData.includes(location) && this.state.cardCompData.length === 2) {
-      this.state.cardCompData.shift();
+      this.state.cardCompData.pop();
       let foundLocation = [...this.state.cardCompData, location]
 
       this.setState({
         cardCompData: foundLocation
       }, () => {
         this.comparison(this.state.cardCompData);
-    });
+      });
     }
   }
 
-
   removeComparisonCard = (e) => {
-
     const cardCompData = this.state.cardCompData.filter(location => location.location !== e)
-    
-
-    //let foundLocation = [...this.state.cardCompData]
-    this.setState({ cardCompData })
-    //console.log(Object.entries(this.state.cardCompData)[e])
+    this.setState({ cardCompData, comparisonData: {} },  ) 
   }
-
 
   comparison = (array) => {
     if(this.state.cardCompData.length === 2) {
       let compData = DistrictData.compareDistrictAverages(array[0].location, array[1].location)
-
       this.setState({ comparisonData: compData })
     }
   }
