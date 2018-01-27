@@ -1,5 +1,16 @@
 .container-wrap {
+  background-color: #0A1B34;
+  display: flex;
+  flex-wrap: wrap;
+  height: 400px;
+  justify-content: space-evenly;
+  overflow: scroll;
   width: 100%;
-  height: 100%;
-  overflow: auto;
+}
+
+.container-wrap h2{
+  color: #7087A8;;
+  font-size: 2em;
+  margin: 0;
+  padding: 0px 0px 25px;
 }

@@ -14,11 +14,14 @@ const ComparisonContainer = (props) => {
       <h1>Comparison Section</h1>
         <article className='comp-card-display'>
           <h2 className='comp-card'>{newCard[0]}</h2>
-          <h2 className='comparison'>{comparisonPairs[0]}</h2>
-          <h2 className='comparison'>{comparisonPairs[1]}</h2>
-          <h2 className='comparison'>{comparisonPairs[2]}</h2>
+          <div className='comparison'>
+            <h2>{comparisonPairs[0]}</h2>
+            <h2>{comparisonPairs[1]}</h2>
+            <h2>{comparisonPairs[2]}</h2>
+          </div>
           <h2 className='comp-card'>{newCard[1]}</h2>
         </article>
+        <hr></hr>
     </section>
   )
 }
