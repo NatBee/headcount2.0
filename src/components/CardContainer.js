@@ -10,7 +10,7 @@ const CardContainer = (props) => {
   
   return (
     <section className='container-wrap'>
-      <h2>School Data:</h2>
+      <h2>School Data by District</h2>
       <div>{ newCard }</div>
     </section>
   )
