@@ -54,7 +54,13 @@ class App extends Component {
 
 
   removeComparisonCard = (e) => {
-    console.log(e.target)
+
+    const cardCompData = this.state.cardCompData.filter(location => location.location !== e)
+    
+
+    //let foundLocation = [...this.state.cardCompData]
+    this.setState({ cardCompData })
+    //console.log(Object.entries(this.state.cardCompData)[e])
   }
 
 
