@@ -1,4 +1,4 @@
-import React from 'react';
+ import React from 'react';
 import ReactDOM from 'react-dom';
 import ComparisonContainer from '../../components/ComparisonContainer';
 import { shallow, mount } from 'enzyme';
@@ -8,7 +8,7 @@ it('should match the snapshot', () => {
   expect(renderedComponent).toMatchSnapshot()
 })
 
-it('should create a card created by a card array', () => {
+it('should have a .card tag for each card in the card array', () => {
   
   const mockedDistrict = {"data": {"2004": 0.24, 
                           "2005": 0.278, 

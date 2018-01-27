@@ -22,8 +22,9 @@ export default class DistrictRepository {
 
   findByName(string){
     //console.log(string)
-    if(string) {
+    if(string && this.data[string.toUpperCase()]) {
       let upperCase = string.toUpperCase();
+
       return [this.data[upperCase]]
     } else {
       return undefined
@@ -38,7 +39,7 @@ export default class DistrictRepository {
        
       const searchResult = Object.values(this.data).filter(district => district.location.includes(string.toUpperCase()))
       //console.log('data: ', this.data)
-      //console.log(searchResult)
+      // console.log(searchResult)
       return searchResult
     
 
