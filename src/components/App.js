@@ -14,7 +14,8 @@ class App extends Component {
     super()
     this.state = {
       allDistrictData: [],
-      cardCompData: []
+      cardCompData: [],
+      comparisonData: {}
     }
   }
 
@@ -31,22 +32,41 @@ class App extends Component {
   }
 
   compareCards = (string) => {
-    //set up conditional where if click on card in card container put in cardCompData array 
-    //if card click in comparison container remove card from cardCompData array
-    //also add condition so that cardCompData is limited to length of 2
-    //create new card component for comparison card
-    //new card should have condition that makes it appear only when cardComp is 2
-    let location1 = DistrictData.findByName(string)
-    this.setState({
-      cardCompData: location1
-    })
+    let location = DistrictData.findByName(string)[0];
+
+    if(!this.state.cardCompData.includes(location) && this.state.cardCompData.length < 2) {
+      let foundLocation = [...this.state.cardCompData, location]
+      
+      this.setState({
+        cardCompData: foundLocation
+      })
+    } else if(!this.state.cardCompData.includes(location) && this.state.cardCompData.length === 2) {
+      this.state.cardCompData.shift();
+      let foundLocation = [...this.state.cardCompData, location]
+
+      this.setState({
+        cardCompData: foundLocation
+      })
+    }
+    this.comparison(this.state.cardCompData)
+  }
+
+  comparison = (array) => {
+
+    if(this.state.cardCompData.length === 2) {
+      let compData = DistrictData.compareDistrictAverages(array[0].location, array[1].location)
+
+      this.setState({ 
+        comparisonData: compData 
+      })
+    }
   }
 
   render() {
     return (
       <section>
         <Controls handleSearch={this.handleSearch} />
-        <ComparisonContainer cardCompData={ this.state.cardCompData }/>
+        <ComparisonContainer cardCompData={ this.state.cardCompData } comparisonData={ this.state.comparisonData }/>
         <CardContainer allDistrictData={ this.state.allDistrictData } compareCards={ this.compareCards }/>
       </section>
     );
