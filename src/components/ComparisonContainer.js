@@ -10,7 +10,11 @@ const ComparisonContainer = (props) => {
   return (
     <section className='comparison-cards'>
       <h1>Comparison Section</h1>
-      {newCard}
+        <article className='comp-card-display'>
+          <h2 className='comp-card'>{newCard[0]}</h2>
+          <h2>Comparison</h2>
+          <h2 className='comp-card'>{newCard[1]}</h2>
+        </article>
     </section>
   )
 }

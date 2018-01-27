@@ -4,3 +4,14 @@
   background-color: lightblue;
   text-align: center;
 }
+
+.comp-card {
+  font-size: 1em;
+  font-weight: normal;
+}
+
+.comp-card-display {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
