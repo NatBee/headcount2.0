@@ -39,16 +39,20 @@ class App extends Component {
       
       this.setState({
         cardCompData: foundLocation
-      })
+      }, () => {
+        this.comparison(this.state.cardCompData);
+    });
     } else if(!this.state.cardCompData.includes(location) && this.state.cardCompData.length === 2) {
       this.state.cardCompData.shift();
       let foundLocation = [...this.state.cardCompData, location]
 
       this.setState({
         cardCompData: foundLocation
-      })
+      }, () => {
+        this.comparison(this.state.cardCompData);
+    });
     }
-    this.comparison(this.state.cardCompData)
+    
   }
 
   comparison = (array) => {
