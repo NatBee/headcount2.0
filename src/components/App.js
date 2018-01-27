@@ -52,8 +52,13 @@ class App extends Component {
     }
   }
 
+
+  removeComparisonCard = (e) => {
+    console.log(e.target)
+  }
+
+
   comparison = (array) => {
-    console.log('init');
     if(this.state.cardCompData.length === 2) {
       let compData = DistrictData.compareDistrictAverages(array[0].location, array[1].location)
 
@@ -65,7 +70,7 @@ class App extends Component {
     return (
       <section>
         <Controls handleSearch={this.handleSearch} />
-        <ComparisonContainer cardCompData={ this.state.cardCompData } comparisonData={ this.state.comparisonData }/>
+        <ComparisonContainer removeComparisonCard={this.removeComparisonCard} cardCompData={ this.state.cardCompData } comparisonData={ this.state.comparisonData }/>
         <CardContainer allDistrictData={ this.state.allDistrictData } compareCards={ this.compareCards }/>
       </section>
     );

@@ -6,7 +6,7 @@ import '../styles/CardContainer.css';
 const CardContainer = (props) => {
 
   const dataArray = Object.keys(props.allDistrictData)
-  const newCard = dataArray.map((location, index) => <Card data={ props.allDistrictData[location]} key={index} compareCards={props.compareCards}/>)
+  const newCard = dataArray.map((location, index) => <Card data={ props.allDistrictData[location]} key={index} handleClick={props.compareCards}/>)
   
   return (
     <section className='container-wrap'>

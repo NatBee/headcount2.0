@@ -11,7 +11,6 @@ class Controls extends Component {
 
   handleInput = (e) => {
     
-    console.log(e.target.value);
     this.setState({district: e.target.value}, () => {
         this.props.handleSearch(this.state.district);
     });

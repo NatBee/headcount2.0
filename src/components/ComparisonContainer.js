@@ -7,7 +7,7 @@ const ComparisonContainer = (props) => {
   const comparisonPairs = Object.entries(props.comparisonData)
   //console.log(comparisonPairs[0])
   const dataArray = Object.keys(props.cardCompData)
-  const newCard = dataArray.map((location, index) => <Card data={ props.cardCompData[location]} key={index}/>)
+  const newCard = dataArray.map((location, index) => <Card handleClick={props.removeComparisonCard} data={ props.cardCompData[location]} key={index}/>)
 
   return (
     <section className='comparison-cards'>
