@@ -18,10 +18,17 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <Controls />,
-        <ComparisonContainer />,
+        <Controls
+          handleSearch={[Function]}
+/>,
+        <ComparisonContainer
+          cardCompData={Array []}
+          comparisonData={Object {}}
+          removeComparisonCard={[Function]}
+/>,
         <CardContainer
           allDistrictData={Array []}
+          compareCards={[Function]}
 />,
       ],
     },
@@ -31,7 +38,9 @@ ShallowWrapper {
         "instance": null,
         "key": undefined,
         "nodeType": "class",
-        "props": Object {},
+        "props": Object {
+          "handleSearch": [Function],
+        },
         "ref": null,
         "rendered": null,
         "type": [Function],
@@ -39,8 +48,12 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "class",
-        "props": Object {},
+        "nodeType": "function",
+        "props": Object {
+          "cardCompData": Array [],
+          "comparisonData": Object {},
+          "removeComparisonCard": [Function],
+        },
         "ref": null,
         "rendered": null,
         "type": [Function],
@@ -48,9 +61,10 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "class",
+        "nodeType": "function",
         "props": Object {
           "allDistrictData": Array [],
+          "compareCards": [Function],
         },
         "ref": null,
         "rendered": null,
@@ -66,10 +80,17 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <Controls />,
-          <ComparisonContainer />,
+          <Controls
+            handleSearch={[Function]}
+/>,
+          <ComparisonContainer
+            cardCompData={Array []}
+            comparisonData={Object {}}
+            removeComparisonCard={[Function]}
+/>,
           <CardContainer
             allDistrictData={Array []}
+            compareCards={[Function]}
 />,
         ],
       },
@@ -79,7 +100,9 @@ ShallowWrapper {
           "instance": null,
           "key": undefined,
           "nodeType": "class",
-          "props": Object {},
+          "props": Object {
+            "handleSearch": [Function],
+          },
           "ref": null,
           "rendered": null,
           "type": [Function],
@@ -87,8 +110,12 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "class",
-          "props": Object {},
+          "nodeType": "function",
+          "props": Object {
+            "cardCompData": Array [],
+            "comparisonData": Object {},
+            "removeComparisonCard": [Function],
+          },
           "ref": null,
           "rendered": null,
           "type": [Function],
@@ -96,9 +123,10 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "class",
+          "nodeType": "function",
           "props": Object {
             "allDistrictData": Array [],
+            "compareCards": [Function],
           },
           "ref": null,
           "rendered": null,

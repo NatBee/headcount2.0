@@ -22,13 +22,13 @@ ShallowWrapper {
            HeadCount 2.0 
 </h1>,
         <input
+          onChange={[Function]}
           placeholder="Enter District Name"
           type="text"
+          value=""
 />,
-        <button>
-          Search
-</button>,
       ],
+      "className": "search-wrap",
     },
     "ref": null,
     "rendered": Array [
@@ -48,23 +48,14 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
+          "onChange": [Function],
           "placeholder": "Enter District Name",
           "type": "text",
+          "value": "",
         },
         "ref": null,
         "rendered": null,
         "type": "input",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "Search",
-        },
-        "ref": null,
-        "rendered": "Search",
-        "type": "button",
       },
     ],
     "type": "header",
@@ -80,13 +71,13 @@ ShallowWrapper {
              HeadCount 2.0 
 </h1>,
           <input
+            onChange={[Function]}
             placeholder="Enter District Name"
             type="text"
+            value=""
 />,
-          <button>
-            Search
-</button>,
         ],
+        "className": "search-wrap",
       },
       "ref": null,
       "rendered": Array [
@@ -106,23 +97,14 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
+            "onChange": [Function],
             "placeholder": "Enter District Name",
             "type": "text",
+            "value": "",
           },
           "ref": null,
           "rendered": null,
           "type": "input",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "Search",
-          },
-          "ref": null,
-          "rendered": "Search",
-          "type": "button",
         },
       ],
       "type": "header",
