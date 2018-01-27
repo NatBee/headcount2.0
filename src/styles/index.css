@@ -5,13 +5,19 @@ body {
 }
 
 header {
-  background-color: #203350 ;
-  color: #E3D5B2;
-  font-size: 3em;
+  background-color: #21344F ;
+  color: #ffff;
+  font-size: 2em;
   letter-spacing: 0.05em;
   padding: 35px 0px 0px;
 }
 
 header h1 {
   margin: 0;
+}
+
+.search-wrap input {
+  font-size: 25px;
+  padding: 3px 140px;
+  margin: 25px 0px;
 }

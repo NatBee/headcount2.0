@@ -1,5 +1,5 @@
 .container-wrap {
-  background-color: #535C78;
+  background-color: #0A1B34;
   display: flex;
   flex-wrap: wrap;
   height: 400px;
@@ -8,3 +8,9 @@
   width: 100%;
 }
 
+.container-wrap h2{
+  color: #7087A8;;
+  font-size: 2em;
+  margin: 0;
+  padding: 0px 0px 25px;
+}

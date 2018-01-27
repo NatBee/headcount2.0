@@ -1,5 +1,6 @@
 .card {
   border: 1px solid;
+  color: #ffff;
   width: 250px;
   display: inline-block;
   margin: 0 5px 10px 0;
@@ -7,7 +8,7 @@
   vertical-align: top;
   padding: 5px;
   text-align: center;
-  background-color: #E3D5B2;
+  background-color: #7087A8;
 }
 
 .card ul{
@@ -24,9 +25,10 @@
 }
 
 .higher{
-  color: #535C78;
+  color: #ffff;
 }
 
 .lower {
-  color: red;
+  color: #0A1B34;
+  font-weight: bold;
 }
