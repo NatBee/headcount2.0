@@ -1,23 +1,31 @@
-body {
+html, 
+body,
+#root,
+.app-wrap{
+  height: 100%;
+}
+
+body{
+  overflow: hidden;
+  background-color: #414457 ;
+  
+  font-family: 'Raleway', sans-serif;
   margin: 0;
   padding: 0;
-  font-family: 'Roboto Slab', serif;
 }
 
 header {
-  background-color: #21344F ;
+  background-color: #1C1F35;
   color: #ffff;
   font-size: 2em;
   letter-spacing: 0.05em;
   padding: 35px 0px 0px;
+  position: relative;
+  z-index: 50;
+  border-bottom: 1px solid grey;
 }
 
 header h1 {
   margin: 0;
 }
 
-.search-wrap input {
-  font-size: 25px;
-  padding: 3px 140px;
-  margin: 25px 0px;
-}

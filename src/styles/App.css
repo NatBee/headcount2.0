@@ -1,1 +1,30 @@
-/*APP COMPONENT RELATED CSS GOES HERE*/
+
+.toggle-compare{
+  position: absolute;
+  z-index: 100;
+  left: 0;
+  top: 18%;
+  font-size: 20px;
+  width: 200px;
+  line-height: 45px;
+  border-top-right-radius: 10px;
+}
+
+.toggle-compare.hide{
+  display: none;
+}
+
+.toggle-compare.show{
+  display: block;
+}
+
+.toggle-compare img{
+  transform: rotate(90deg);
+  width: 25px;
+  margin: 5px 0 -6px 10px;
+}
+
+
+.comparison-title{
+  color: white;
+}

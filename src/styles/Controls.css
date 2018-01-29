@@ -1,8 +1,12 @@
 .search-wrap {
   text-align: center;
+  height: 20%;
+
 }
 
-.search-wrap input{
-  font-size: 20px;
+
+.search-wrap input {
+  font-size: 25px;
+  margin: 25px 0px;
 }
 
