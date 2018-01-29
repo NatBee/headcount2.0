@@ -1,10 +1,11 @@
- import React from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 import ComparisonContainer from '../../components/ComparisonContainer';
 import { shallow, mount } from 'enzyme';
 
+
 it('should match the snapshot', () => {
-  const renderedComponent = shallow(<ComparisonContainer/>)
+  const renderedComponent = shallow(<ComparisonContainer />)
   expect(renderedComponent).toMatchSnapshot()
 })
 

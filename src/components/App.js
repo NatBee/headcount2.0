@@ -32,6 +32,7 @@ class App extends Component {
   }
 
   compareCards = (string) => {
+    console.log(string)
     let location = DistrictData.findByName(string)[0];
     let compCardArr = this.state.cardCompData;
     let foundLocation;
@@ -68,14 +69,12 @@ class App extends Component {
 
   }
 
-  comparison = (array) => {
-
+  comparison = (array) => { 
+    console.log(array)
     if(this.state.cardCompData.length === 2) {
-      console.table(this.state.cardCompData)
       let compData = DistrictData.compareDistrictAverages(array[0].location, array[1].location)
       this.setState({ comparisonData: compData })
     }
-    //console.log(this.state.comparisonData)
   }
 
   render() {
@@ -100,5 +99,6 @@ class App extends Component {
     );
   }
 }
+
 
 export default App;

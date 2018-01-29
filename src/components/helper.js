@@ -4,17 +4,13 @@ export default class DistrictRepository {
     }
 
     schoolData(info) {
-      
         return info.reduce((accu, school) => {
             const rounding = Math.round(school.Data * 1000) / 1000;
-
             if(!accu[school.Location.toUpperCase()]) {
                 accu[school.Location.toUpperCase()] = {data:{[school.TimeFrame] : rounding || 0}, 
                     location: school.Location.toUpperCase()};
             }
-
             accu[school.Location.toUpperCase()].data[school.TimeFrame] = rounding || 0;
-            
             return accu;
         }, []);
     }  
@@ -23,7 +19,6 @@ export default class DistrictRepository {
      
         if(string && this.data[string.toUpperCase()]) {
             let upperCase = string.toUpperCase();
-
             return [this.data[upperCase]];
         } else {
             return undefined;
@@ -31,11 +26,9 @@ export default class DistrictRepository {
     }
 
     findAllMatches(string){
-      
         if (!string){
             return this.data;
         } 
-       
         const searchResult = Object.values(this.data).filter(district => district.location.includes(string.toUpperCase()));
         return searchResult;
     }
@@ -45,9 +38,7 @@ export default class DistrictRepository {
             accu = accu + data;
             return accu;
         }, 0);
-
         let length = Object.values(this.data[string.toUpperCase()].data).length;
-      
         return Math.round((sum / length) * 1000) / 1000;
     }
 
@@ -57,7 +48,6 @@ export default class DistrictRepository {
         const average1 = this.findAverage(string1);
         const location2 = this.data[string2.toUpperCase()].location;
         const average2 = this.findAverage(string2);
-
         const comparison = Math.round((average1 / average2) * 1000) / 1000;
 
         obj[location1] = average1;

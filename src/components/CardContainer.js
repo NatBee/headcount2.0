@@ -1,6 +1,7 @@
 import React from 'react';
 import Card from './Card';
 import '../styles/CardContainer.css';
+import PropTypes from 'prop-types';
 
 
 const CardContainer = (props) => {
@@ -17,5 +18,13 @@ const CardContainer = (props) => {
         </div>
     );
 };
+
+CardContainer.propTypes = {
+    compareCards: PropTypes.func,
+    allDistrictData: PropTypes.array,
+    props: PropTypes.shape({
+        data: PropTypes.Object
+    })
+}
 
 export default CardContainer;

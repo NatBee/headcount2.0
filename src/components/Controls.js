@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../styles/Controls.css'
+import PropTypes from 'prop-types';
 
 class Controls extends Component {
   constructor(props){
@@ -10,24 +11,24 @@ class Controls extends Component {
   }
 
   handleInput = (e) => {
-    
     this.setState({district: e.target.value}, () => {
         this.props.handleSearch(this.state.district);
     });
-
   }
-
 
   render() {
     return (
       <header className='search-wrap'>
         <h1> HeadCount 2.0 </h1>
-        <input onChange={this.handleInput} value={this.state.district} type='text' placeholder='Enter District Name' /> 
-        
+        <input onChange={this.handleInput} value={this.state.district} type='text' placeholder='Enter District Name' />  
       </header>
-      )
-  }
-
+      );
+  };
 }
 
-export default Controls
+Controls.propTypes = {
+  handleSearch: PropTypes.func,
+  district: PropTypes.string
+}
+
+export default Controls;

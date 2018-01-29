@@ -1,6 +1,7 @@
 import React from 'react';
 import Card from './Card';
 import '../styles/ComparisonContainer.css';
+import PropTypes from 'prop-types';
 
 const ComparisonContainer = (props) => {
 
@@ -22,5 +23,12 @@ const ComparisonContainer = (props) => {
         </div>
     );
 };
+
+ComparisonContainer.propTypes = {
+  comparisonData: PropTypes.object,
+  cardCompData: PropTypes.array,
+  removeComparisonCard: PropTypes.func,
+  visibility: PropTypes.string
+}
 
 export default ComparisonContainer;

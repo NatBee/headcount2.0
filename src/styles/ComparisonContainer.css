@@ -7,6 +7,7 @@
   position: fixed;
   opacity: 1;
   transition: all .3s;
+  padding: 20px 0 0 0;
 }
 
 .comparison-cards.hide {
@@ -33,6 +34,7 @@
 .comp-card {
   font-size: 1em;
   font-weight: normal;
+  margin: 0;
 }
 
 .comp-card-display {
