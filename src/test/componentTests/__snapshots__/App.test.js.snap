@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should match the snapshot 1`] = `
+exports[`App tests should match the snapshot 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
@@ -21,16 +21,27 @@ ShallowWrapper {
         <Controls
           handleSearch={[Function]}
 />,
+        <button
+          className="toggle-compare hide"
+          onClick={[Function]}
+>
+          Compare Cards
+          <img
+                    src="right-arrow.svg"
+          />
+</button>,
         <ComparisonContainer
           cardCompData={Array []}
           comparisonData={Object {}}
           removeComparisonCard={[Function]}
+          visibility="comparison-cards hide"
 />,
         <CardContainer
           allDistrictData={Array []}
           compareCards={[Function]}
 />,
       ],
+      "className": "app-wrap",
     },
     "ref": null,
     "rendered": Array [
@@ -48,11 +59,43 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "Compare Cards",
+            <img
+              src="right-arrow.svg"
+/>,
+          ],
+          "className": "toggle-compare hide",
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": Array [
+          "Compare Cards",
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "src": "right-arrow.svg",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "img",
+          },
+        ],
+        "type": "button",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
         "nodeType": "function",
         "props": Object {
           "cardCompData": Array [],
           "comparisonData": Object {},
           "removeComparisonCard": [Function],
+          "visibility": "comparison-cards hide",
         },
         "ref": null,
         "rendered": null,
@@ -83,16 +126,27 @@ ShallowWrapper {
           <Controls
             handleSearch={[Function]}
 />,
+          <button
+            className="toggle-compare hide"
+            onClick={[Function]}
+>
+            Compare Cards
+            <img
+                        src="right-arrow.svg"
+            />
+</button>,
           <ComparisonContainer
             cardCompData={Array []}
             comparisonData={Object {}}
             removeComparisonCard={[Function]}
+            visibility="comparison-cards hide"
 />,
           <CardContainer
             allDistrictData={Array []}
             compareCards={[Function]}
 />,
         ],
+        "className": "app-wrap",
       },
       "ref": null,
       "rendered": Array [
@@ -110,11 +164,43 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Compare Cards",
+              <img
+                src="right-arrow.svg"
+/>,
+            ],
+            "className": "toggle-compare hide",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": Array [
+            "Compare Cards",
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "src": "right-arrow.svg",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "img",
+            },
+          ],
+          "type": "button",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
           "nodeType": "function",
           "props": Object {
             "cardCompData": Array [],
             "comparisonData": Object {},
             "removeComparisonCard": [Function],
+            "visibility": "comparison-cards hide",
           },
           "ref": null,
           "rendered": null,

@@ -4,6 +4,7 @@ import ComparisonContainer from './ComparisonContainer';
 import CardContainer from './CardContainer';
 import DistrictRepository from './helper';
 import '../styles/App.css';
+import Arrow from '../styles/images/right-arrow.svg'
 import kinderData from '../data/kindergartners_in_full_day_program.js';
 
 const DistrictData = new DistrictRepository(kinderData);
@@ -15,12 +16,15 @@ class App extends Component {
     this.state = {
       allDistrictData: [],
       cardCompData: [],
-      comparisonData: {}
+      comparisonData: {},
+      menuVisible: false
     }
+     
   }
 
   componentDidMount() {
-    this.setState({ allDistrictData: DistrictData.data })
+    this.setState({ allDistrictData: DistrictData.data
+     })
   }
 
   handleSearch = (string) => {
@@ -57,18 +61,40 @@ class App extends Component {
     this.setState({ cardCompData, comparisonData: {} },  ) 
   }
 
+  toggleCompare = () => {
+    this.setState({ 
+      menuVisible: !this.state.menuVisible
+     })
+
+  }
+
   comparison = (array) => {
+
     if(this.state.cardCompData.length === 2) {
+      console.table(this.state.cardCompData)
       let compData = DistrictData.compareDistrictAverages(array[0].location, array[1].location)
       this.setState({ comparisonData: compData })
     }
+    //console.log(this.state.comparisonData)
   }
 
   render() {
+
+    let button;
+    let visible;
+    if (this.state.cardCompData.length >= 1) {
+      button = 'toggle-compare show';
+      visible = 'comparison-cards show';
+    } else if(this.state.cardCompData.length < 1){
+      button = 'toggle-compare hide';
+      visible = 'comparison-cards hide';
+    }
+
     return (
-      <section>
+      <section className='app-wrap'>
         <Controls handleSearch={this.handleSearch} />
-        <ComparisonContainer removeComparisonCard={this.removeComparisonCard} cardCompData={ this.state.cardCompData } comparisonData={ this.state.comparisonData }/>
+        {<button onClick={this.toggleCompare} className={ button } >Compare Cards<img src={Arrow} /></button>}
+        <ComparisonContainer visibility={visible} removeComparisonCard={this.removeComparisonCard} cardCompData={ this.state.cardCompData } comparisonData={ this.state.comparisonData }/>
         <CardContainer allDistrictData={ this.state.allDistrictData } compareCards={ this.compareCards }/>
       </section>
     );

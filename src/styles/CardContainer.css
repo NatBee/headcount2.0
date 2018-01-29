@@ -1,16 +1,24 @@
-.container-wrap {
-  background-color: #0A1B34;
-  display: flex;
-  flex-wrap: wrap;
-  height: 675px;
-  justify-content: space-evenly;
+.card-section{
   overflow: scroll;
   width: 100%;
+  height: 80%;
+  padding-bottom: 30px;
 }
 
-.container-wrap h2{
+.card-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: 100%;
+  padding: 0 30px;
+}
+
+.card-wrap h2{
   color: #7087A8;;
   font-size: 2em;
   margin: 0;
   padding: 0px 0px 25px;
+  font-family: 'Roboto', sans-serif;
+
+
 }
