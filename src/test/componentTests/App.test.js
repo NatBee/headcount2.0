@@ -30,7 +30,7 @@ describe('App tests', () => {
   it('when handleSearch is called with a district, the state should have that district object', () => {
     renderedComponent.instance().handleSearch('COLORADO')
     console.log(renderedComponent.state().allDistrictData[0])
-    expect(renderedComponent.state().allDistrictData[0]).toEqual(mockProps)
+    expect(renderedComponent.state().allDistrictData[0git ]).toEqual(mockProps)
   })
 
   it('should have 1 card in cardCompData when compare care function runs once', () => {
